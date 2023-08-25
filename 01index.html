@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        /* universal selector */
+        * {
+            background-color: #4d4d4d;
+            color: #ffffff;
+        }
+
+        /* individual selector / element selector */
+        p {
+            background-color: cadetblue;
+        }
+
+        /* class and id selector */ 
+        .warning {
+            background-color: #ef9323;
+            color: #FFFFFF;
+        }
+
+        #danger {
+            background-color: #da1515;
+            color: #FFFFFF;
+        }
+
+        /* and selector (chained)*/
+        li.bg-black.text-white {
+            background-color: #86e29b;
+            color: rgb(8, 8, 8);
+        }
+
+        li#item {
+            background-color: #6660e4;
+            color: rgb(241, 118, 118);
+        }
+
+        li#item7.bg-blue {
+            background-color: darkgreen;
+            color: #ffffff;
+        }
+
+        /* combines selector */
+        span, #item8 {
+            background-color: #ef9323;
+
+        }
+
+        /* inside an element */
+        div ul li {
+            background-color: chocolate;
+        }
+
+        div li span {
+            background-color: #83a30d;
+        }
+
+        /* direct child */
+        div > li {
+            background-color: #83a30d;
+        }
+
+        .section > .test5 {
+            background-color: blueviolet;
+        }
+
+        /* sibling ~ or + */
+        .sibling + p {
+            background-color: pink
+        }
+    </style>
+</head>
+<body>
+    <div>Welcome to live class</div>
+    <span>Spam is just a span, nothing more</span>
+    <p>We all know paragraph</p>
+    <ul>
+        <li class="bg-black text-white">item</li>
+        <li class="bg-black">item1</li>
+        <li class="warning">item2</li>
+        <li id="danger">item3</li>
+        <li>item4</li>
+        <li>item5</li>
+        <li id="item">item6</li>
+        <li class="bg-blue" id="item7">item7</li>
+        <li id="item8">item8</li>
+    </ul>
+
+    <div>
+        <p>lorem paragraph</p>
+        <li>awesome</li>
+        <ul>
+            <li>highlight me</li>
+            <li>highlight me <span>Span under list</span></li>
+        </ul>
+    </div>
+
+    <section class="section">
+        <p>Test 1</p>
+        <p class="sibling">Test 2</p>
+        <p>Test 3</p>
+        <p>Test 4</p>
+        <p class="test5">Test 5</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,83 @@
+**Relative Positioning:**
+
+    Relative positioning is a fundamental concept in CSS that allows you to move an element's position relative to its normal (or "static") position within the document flow. Unlike absolute positioning, which positions an element relative to its nearest positioned ancestor or the entire viewport, relative positioning doesn't completely remove the element from the normal document flow. Instead, it shifts the element visually while leaving its space in the document flow unchanged.
+
+    **How it Works:**
+
+    When you apply relative positioning to an element using CSS, you can use the `top`, `right`, `bottom`, and `left` properties to move the element from its original position. Here's how it works:
+
+    1. **Initial State:** By default, HTML elements are positioned "statically." This means they follow the normal flow of the document and their position is determined by their order in the HTML markup.
+
+    2. **Applying Relative Positioning:** To make an element relatively positioned, you use the CSS property `position: relative;`.
+
+    ```css
+    .relative-box {
+        position: relative;
+    }
+    ```
+
+    Now, the element with the class `relative-box` is relatively positioned.
+
+    3. **Using Offsets:** After applying relative positioning, you can use the `top`, `right`, `bottom`, and `left` properties to move the element from its initial position. Positive values for `top` and `left` move the element down and to the right, respectively. Negative values move the element in the opposite directions.
+
+    ```css
+    .relative-box {
+        position: relative;
+        top: 20px;
+        left: 30px;
+    }
+    ```
+
+    In this example, the element will be shifted 20 pixels down and 30 pixels to the right from its original position.
+
+    4. **Impact on Document Flow:** Importantly, using relative positioning doesn't affect the layout of other elements on the page. The space originally occupied by the element remains reserved, even if the element is visually moved. This is why relative positioning is often used for minor adjustments or creating overlays within the normal flow.
+
+    5. **Layering:** If you use relative positioning along with `z-index`, you can control the stacking order of elements on the z-axis. Elements with higher `z-index` values will be displayed on top of elements with lower values.
+
+    Remember that while relative positioning is useful for making small adjustments, it might not be the best choice for complex layouts or precise positioning. In such cases, you might want to explore other positioning techniques like absolute or flex positioning.
+
+    In summary, relative positioning in CSS allows you to visually adjust an element's position while still maintaining its reserved space in the normal document flow.
+
+
+
+**Absolute Positioning:**
+    Absolute positioning is a CSS positioning property that allows you to precisely control the position of an element on a webpage relative to its closest positioned ancestor or to the document's viewport. Unlike the default flow of elements in a document, where they stack vertically and horizontally, absolute positioning allows you to take an element out of this flow and position it anywhere on the page, often referred to as "absolute" coordinates.
+
+    Here's how it works:
+
+    1. **Position Property:** To use absolute positioning, you set the `position` property of an element to `absolute`. This informs the browser that you want to take the element out of the normal document flow.
+
+    2. **Positioning Context:** Once an element is positioned absolutely, it's positioned based on its closest positioned ancestor. A positioned ancestor is an element with a `position` value of `relative`, `absolute`, or `fixed`. If no positioned ancestor is found, the positioning is done relative to the viewport.
+
+    3. **Coordinates:** After defining the positioning context, you can use the `top`, `right`, `bottom`, and `left` properties to specify how far the element should be from the corresponding edges of its positioned ancestor. These properties determine the element's offset from the specified edges in pixels, percentages, em units, etc.
+
+    Here's an example of how you might use absolute positioning in CSS:
+
+    ```css
+    .parent {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    }
+
+    .child {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    }
+    ```
+
+    In this example, the `.parent` element is given a `position: relative;` style, creating a positioning context. The `.child` element is then positioned absolutely within the `.parent` element. It will be 50 pixels from the top edge and 100 pixels from the left edge of the `.parent` element.
+
+    Keep in mind:
+
+    - Elements with absolute positioning are taken out of the normal document flow, so they won't affect the positioning of other elements.
+    - If no positioned ancestor is found, the element's position is relative to the viewport.
+    - Avoid excessive use of absolute positioning, as it can lead to layout and responsive design challenges.
+
+    Absolute positioning can be very useful for creating custom layouts, tooltips, overlays, and more, but it should be used thoughtfully to ensure maintainable and responsive designs.    
+
+
+    * If we move a absolute position element then it will start from it's parent position, and it does not takes it's elements space;
+
+    * If we move a relative position element then it will start from it's current position, and it does takes it's elements space;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsudoSelector</title>
+    <style>
+        a:hover {
+            color: red;
+        }
+
+        /* when you clicked on link */
+        a:visited {
+            color: green;
+        }
+
+        /* before clicking the link */
+        /* when a:link is applied then a:hover will not work */
+        a:link {
+            color: rgb(33, 16, 186);
+        }
+
+        input:focus {
+            background-color: aqua;
+            height: 30px;
+            font-size: large;
+        }
+
+        /* li:nth-child(odd) {
+            background-color: aquamarine;
+        }
+
+        li:nth-child(even) {
+            background-color: rgb(221, 134, 13);
+        } */
+
+        /* li:nth-child(2n){
+            background-color: rgb(221, 134, 13);
+            border: 2px dotted aquamarine;
+        } */
+
+        /* li:first-child {
+            background-color: aquamarine;
+        } */
+
+        li:last-child {
+            background-color: rgb(219, 29, 219);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <a href="https://www.google.co">Google</a> <br>
+    <input type="text" name="" id=""> Name <br>
+    <input type="text" name="" id=""> Password <br>
+
+    <ol>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+        <li>Six</li>
+        <li>Seven</li>
+        <li>Eight</li>
+        <li>Nine</li>
+        <li>Ten</li>
+        <li>Zero</li>
+    </ol>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+    </ul>
+</body>
+</html>

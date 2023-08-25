@@ -1,0 +1,86 @@
+* always use hash code for color because concret name of color may differ from browser to browser.
+
+for example: red color in chrome is different as compared to red color in Edge or Mozilla.
+
+As a UI developer, it's essential to understand when to use ID selectors and when to use class selectors in CSS. Both ID and class selectors are powerful tools, but they serve different purposes. Here are some common use cases for each:
+
+*** Use Cases for ID Selectors:
+1. Unique Elements: IDs should be used to select elements that are unique on a page. An ID must only be assigned to one element in the entire HTML document. For example, the header, footer, or main content section of a page might have unique styles, and IDs can be applied to target these specific elements.
+
+2. Targeting JavaScript: When you need to select elements specifically for JavaScript interactions, using an ID is recommended. IDs can make it easier to target elements through JavaScript, allowing you to manipulate their properties or behavior dynamically.
+
+3. Deep Linking: IDs are commonly used in deep linking scenarios. By having a specific ID assigned to a section or element, you can create anchor links that scroll users to that particular section when clicked on.
+
+Example:
+```html
+<div id="header">This is the header</div>
+```
+```css
+#header {
+  /* Styles for the header element */
+}
+```
+
+*** Use Cases for Class Selectors:
+1. Reusable Styles: Classes should be used when you have multiple elements that share the same styles. They promote code reusability and help maintain consistency throughout the website.
+
+2. Component Styling: When working with CSS frameworks or building custom components, classes are often used to apply specific styles to these components. It allows for encapsulated and modular CSS.
+
+3. Grouping Elements: If you want to apply a particular style to a group of elements, using a class is appropriate. For instance, styling a group of buttons or a specific type of text.
+
+Example:
+```html
+<button class="primary-button">Click me</button>
+<button class="primary-button">Submit</button>
+```
+```css
+.primary-button {
+  /* Styles for primary buttons */
+}
+```
+
+4. Overriding Specific Styles: In some cases, you may need to override specific styles applied to elements. Using a class selector allows you to target specific elements without affecting others that might share the same tag or parent.
+
+Example:
+```html
+<div class="highlight">This is important text</div>
+<p class="highlight">This is not as important</p>
+```
+```css
+.highlight {
+  /* Styles to highlight important text */
+}
+```
+
+Remember that both ID and class selectors have their places in CSS, and it's important to use them appropriately to create maintainable, scalable, and modular styles for your web applications. Following best practices and choosing the right selector type will make your CSS more efficient and easier to manage.
+
+5. ::before and ::after inject an element before or after selected element.
+
+6. css works in the order it is written in html file.
+
+7. li:nth-child(3n){
+            background-color: rgb(221, 134, 13);
+        }
+
+    Here n start from 0 like => 0, 3, 6, 9....    
+
+8. Css priority lies as follows
+   Inline Css > Internal Css > External css    
+   Inrernal Css => (written in same html file in style tag)
+
+9. Margin works on the block created by an element.
+   Padding works on the content inside the block.
+   Sequence of margin and padding is => Top Right Bottom Left
+
+10. We can use one Id for many places and it will work also, but it is nota    good approach, Is should be unique always.
+
+11. there are 5 type of positions
+       1) static(default)
+       2) fixed
+       3) sticky
+       4) relative
+       5) absolute   
+
+12. Best place to learn CSS is csstricks.com       
+
+13. Media query used to make or add resposiveness to the application.
