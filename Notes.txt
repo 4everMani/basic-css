@@ -84,3 +84,5 @@ Remember that both ID and class selectors have their places in CSS, and it's imp
 12. Best place to learn CSS is csstricks.com       
 
 13. Media query used to make or add resposiveness to the application.
+
+14. Flex grow is used to modify the size of flex item, and it applies on flex item only.
